@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+/* header start*/
+
+.header_up{
+    height: 40px;
+    background-color: #ffcc25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(33, 37, 41);
+    font-weight: 500;
+}
+.header_up a{
+    color: #a34f5b;
+    text-decoration: none;
+    font-weight: 600;
+}
+.header_middle{
+    width: 100%;
+    height: 110px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.search_bar{
+    width: 165px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.search_input{
+    width: 130px;
+    font-size: 17px;
+    padding: 7px 10px;
+    opacity: 0.9;
+    border: none;
+    outline: none;
+}
+.contact_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contact_container a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+}
+.contact_container a:hover{
+    color: rgb(165, 65, 134);
+}
+.fa-shopping-cart{
+    font-size: 30px;
+    cursor: pointer;
+}
+.contact_container button{
+    padding: 8px 10px;
+    color: rgb(165, 65, 134);
+    background-color: #ffcc25;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* navbar start */
+
+.navbar_lower{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-left: 220px;
+}
+.navbar_lower select{
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+.navbar_lower select:hover{
+    color: rgb(165, 65, 134);
+}
+.navbar_lower div a{
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+}
+.navbar_lower div a:hover{
+    color: rgb(165, 65, 134);
+}
+
+/* navbar end */
+
+/* header end */
+
+/* main start */
+
+.carousel img{
+    width: 100%;
+}
