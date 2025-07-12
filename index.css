@@ -5,7 +5,9 @@
     box-sizing: border-box;
     font-family: "Fira Sans", sans-serif;
 }
-/* header start*/
+
+/* header start */
+/* nav_up start*/
 
 .header_up{
     height: 40px;
@@ -69,7 +71,9 @@
     cursor: pointer;
 }
 
-/* navbar start */
+/* nav_up end */
+
+/* navbar_lower start */
 
 .navbar_lower{
     width: 100%;
@@ -79,14 +83,6 @@
     align-items: center;
     padding-left: 220px;
 }
-.navbar_lower select{
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-}
-.navbar_lower select:hover{
-    color: rgb(165, 65, 134);
-}
 .navbar_lower div a{
     text-decoration: none;
     color: rgb(33, 37, 41);
@@ -95,41 +91,74 @@
     color: rgb(165, 65, 134);
 }
 
-/* navbar end */
-
 /* dropdown of all wine start */
 
 .all_wines{
     position: relative;
 }
+.p_arrow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.fa-angle-down{
+    font-size: 10px;
+}
+.p_arrow:hover,.fa-angle-down:hover{
+    color: rgb(165, 65, 134);
+}
 
 .drop_all_wine_menu_container{
     position: absolute;
     top: 35px;
-    width: 800px;
-    height: 520px;
-    padding: 20px;
+    width: 700px;
+    max-height: 0;
+    padding: 0 20px;
     display: flex;
-    /* gap: 100px; */
+    gap: 20px;
     background-color: #fff;
-    border: 1px solid red;
+    border: 1px solid black;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.all_wines:hover .drop_all_wine_menu_container,.drop_all_wine_menu_container:hover{
+    max-height: 520px;
+    visibility: visible;
+    padding: 20px;
+    opacity: 1;
+    z-index: 999;
 }
 
 .red_wine,.white_wine{
-    border-right: 1px solid red;
-    padding-right: 80px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding-right: 85px;
 }
 .list_anchor_heading{
     margin-bottom: 10px;
 }
 .list_anchor_heading a{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
 }
 .all_list_anchor_container{
     padding-left: 10px;
     list-style-type: none;
 }
+.all_list_anchor_container li{
+    margin-bottom: 8px;
+}
+
+/* dropdown of all wine start */
+
+/* navbar_lower end */
 
 /* header end */
 
