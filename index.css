@@ -116,7 +116,7 @@
 .drop_all_wine_menu_container{
     position: absolute;
     top: 35px;
-    width: 700px;
+    width: 720px;
     max-height: 0;
     padding: 0 20px;
     display: flex;
@@ -139,7 +139,7 @@
 
 .red_wine,.white_wine{
     border-right: 1px solid rgba(0, 0, 0, 0.2);
-    padding-right: 85px;
+    padding-right: 35px;
 }
 .list_anchor_heading{
     margin-bottom: 10px;
@@ -156,7 +156,72 @@
     margin-bottom: 8px;
 }
 
-/* dropdown of all wine start */
+/* dropdown of all wine end */
+
+
+/* dropdown of gift wine start */
+
+.gift_wine{
+    position: relative;
+
+}
+.gift_wine_dropdown_container{
+    position: absolute;
+    top: 34px;
+    left: -60px;
+    width: 650px;
+    max-height: 0px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(-150px);
+    transition: all 0.4s ease;
+}
+.gift_wine:hover .gift_wine_dropdown_container,.gift_wine_dropdown_container:hover{
+    max-height: 275px;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 999;
+    opacity: 1;
+}
+
+.drop_gift_1_row,.drop_gift_2_row{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ul li{
+    list-style-type: none;
+    padding-right: 55px;
+}
+.drop_gift_1_row ul li, .drop_gift_2_row ul li{
+    margin-bottom: 5px;
+}
+.drop_gift_1_row ul li, .drop_gift_2_row ul li{
+    padding-left: 15px;
+}
+.drop_gift_1_row p, .drop_gift_2_row p, .drop_gift_3_row p{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.drop_gift_1_row p:hover, .drop_gift_2_row p:hover, .drop_gift_3_row p:hover{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: rgb(165, 65, 134);
+}
+
+/* dropdown of gift wine end */
+
 
 /* navbar_lower end */
 
