@@ -222,6 +222,60 @@ ul li{
 
 /* dropdown of gift wine end */
 
+/* dropdown of region start */
+
+.Regions{
+    position: relative;
+}
+.region_wine_dropdown_container{
+    position: absolute;
+    top: 34px;
+    left: -170px;
+    width: 640px;
+    max-height: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.Regions:hover .region_wine_dropdown_container,.region_wine_dropdown_container:hover{
+    max-height: 210px;
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+}
+.drop_region_1_row,.drop_region_2_row,.drop_region_3_row{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.drop_region_1_row,.drop_region_2_row{
+    display: flex;
+    flex-direction: column;
+}
+.drop_region_1_row a,.drop_region_2_row a{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.drop_region_3_row ul p,.drop_region_4_row ul p{
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.drop_region_3_row ul p:hover,.drop_region_4_row ul p:hover{
+    color: rgb(165, 65, 134);
+}
+.drop_region_3_row ul li,.drop_region_4_row ul li{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/* dropdown of region end */
 
 /* navbar_lower end */
 
