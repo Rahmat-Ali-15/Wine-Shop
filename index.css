@@ -97,6 +97,40 @@
 
 /* navbar end */
 
+/* dropdown of all wine start */
+
+.all_wines{
+    position: relative;
+}
+
+.drop_all_wine_menu_container{
+    position: absolute;
+    top: 35px;
+    width: 800px;
+    height: 520px;
+    padding: 20px;
+    display: flex;
+    /* gap: 100px; */
+    background-color: #fff;
+    border: 1px solid red;
+}
+
+.red_wine,.white_wine{
+    border-right: 1px solid red;
+    padding-right: 80px;
+}
+.list_anchor_heading{
+    margin-bottom: 10px;
+}
+.list_anchor_heading a{
+    font-weight: 500;
+    font-size: 18px;
+}
+.all_list_anchor_container{
+    padding-left: 10px;
+    list-style-type: none;
+}
+
 /* header end */
 
 /* main start */
