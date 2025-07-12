@@ -277,6 +277,48 @@ ul li{
 
 /* dropdown of region end */
 
+/* dropdown of discover wine start */
+
+.discover_wine{
+    position: relative;
+}
+.drop_discover_1_row{
+    position: absolute;
+    top: 34px;
+    width: 280px;
+    max-height: 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.discover_wine:hover .drop_discover_1_row,.drop_discover_1_row:hover{
+    max-height: 360px;
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+}
+.drop_discover_1_row ul p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.drop_discover_1_row ul p:hover{
+    color: rgb(165, 65, 134);
+}
+.drop_discover_1_row ul li{
+    padding-left: 10px;
+    margin-bottom: 8px;
+    font-family: 16px;
+}
+
+/* dropdown of discover wine end */
+
 /* navbar_lower end */
 
 /* header end */
