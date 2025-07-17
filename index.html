@@ -10,7 +10,7 @@
     <script src="./index.js" defer></script>
     
 </head> 
-<body>
+<body onload="discoverImagesData()">
     <header>
 
 
@@ -270,7 +270,6 @@
               <img src="Utilities/carousel6.jpg" alt="Carousel image6">
             </div>
         </div>
-
         <!-- carousel end -->
 
         <!-- wine time start -->
@@ -284,7 +283,6 @@
             </div>
             <p class="time_last_para">The safety of our coworkers and customers continue to remain our highest priority. Please wear masks and follow hygiene practices and social distancing.</p>
         </section>
-
         <!-- wine time end -->
 
         <!-- wine map start -->
@@ -294,7 +292,14 @@
                 <div class="left_map_content">
                    <h3>Wine Park, Mumbai</h3>
                     <div class="map_rating">
-                        <p>4.2</p>
+                        <div class="star-rating">
+                            <p>5.0</p>
+                            <span class="star" data-value="5">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="1">★</span>
+                        </div>
                         <a href="#">35 Reviews</a>
                     </div>
                     <address>
@@ -305,7 +310,18 @@
                     </address>
                 </div> 
             </div>
-            <div class="right_map"></div>
+            <div class="right_map">
+                <div class="embed-map-fixed">
+                    <div class="embed-map-container">
+                        <iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Saki%20Naka%20wine%20park&t=&z=14&ie=UTF8&iwloc=B&output=embed">
+                        </iframe>
+                        <a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">sprunki retake</a>
+                    </div>
+                    <style>
+                    .embed-map-fixed{position:relative;text-align:right;width:650px;height:430px;}.embed-map-container{overflow:hidden;background:none!important;width:650px;height:430px;}.embed-map-frame{width:650px!important;height:430px!important;}
+                    </style>
+                </div>
+            </div>
         </section>
         <!-- wine map end -->
 
@@ -340,8 +356,122 @@
                 <a href="#">FRENCH WINE</a>
             </div>
         </section>
-
         <!-- wine type end -->
+
+        <!-- discover wine start -->
+
+        <section class="discover_wine_container">
+            <div class="discover_wine_heading">
+                <span></span>
+                <h3>Discover Wines</h3>
+                <span></span>
+            </div>
+            <div class="discover_images_container"></div>
+        </section>
+        <!-- discover wine end -->
+
+        <!-- family wine start -->
+
+        <section class="family_wine_container">
+            <div class="family_wine_heading">
+                <span></span>
+                <h3>Wines by Man Family</h3>
+                <span></span>
+            </div>
+            <div class="arro_family_wine_img">
+                <i class="fa fa-angle-left"></i>
+                <div class="family_wine_img_container"></div>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </section>
+        <!-- family wine end -->
     </main>
+    <!-- main part end -->
+
+    <!-- footer part start -->
+
+    <footer>
+        <section class="footer_container">
+            <div class="footer_up">
+                    <div class="footer_red_wine">
+                        <ul>
+                            <p><a href="#">Red Wine</a></p>
+                            <li><a href="#">Cabernet Sauvignon</a></li>
+                            <li><a href="#">Shiraz/Syrah</a></li>
+                            <li><a href="#">Sangiovese</a></li>
+                            <li><a href="#">Pinot Noir</a></li>
+                            <li><a href="#">Merlot</a></li>
+                            <li><a href="#">Tempranillo</a></li>
+                            <li><a href="#">Nebbiolo</a></li>
+                            <li><a href="#">Grenache</a></li>
+                            <li><a href="#">Malbec</a></li>
+                            <li><a href="#">Barbera</a></li>
+                            <li><a href="#">Cabernet Franc</a></li>
+                            <li><a href="#">Pinotage</a></li>
+                            <li><a href="#">Blaufränkisch</a></li>
+                            <li><a href="#">Nerello Mascalese</a></li>
+                            <li><a href="#">Touriga Nacional</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_white_wine">
+                        <ul>
+                            <p><a href="#">White Wine</a></p>
+                            <li><a href="#">Chardonnay</a></li>
+                            <li><a href="#">Sauvignon Blanc</a></li>
+                            <li><a href="#">Chenin Blanc</a></li>
+                            <li><a href="#">Riesling</a></li>
+                            <li><a href="#">Pinot Grigio</a></li>
+                            <li><a href="#">Viognier</a></li>
+                            <li><a href="#">Torrontes</a></li>
+                            <li><a href="#">Carricante</a></li>
+                            <li><a href="#">Gruner Veltliner</a></li>
+                            <li><a href="#">Loureiro</a></li>
+                            <li><a href="#">Grenache BlancGarganega</a></li>
+                            <li><a href="#">Garganega</a></li>
+                            <li><a href="#">Clairette</a></li>
+                            <li><a href="#">Roussanne</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_region_wine">
+                        <ul>
+                            <p><a href="#">Regions</a></p>
+                            <li><a href="#">Argentina</a></li>
+                            <li><a href="#">Australia</a></li>
+                            <li><a href="#">Austria</a></li>
+                            <li><a href="#">France</a></li>
+                            <li><a href="#">Germany</a></li>
+                            <li><a href="#">India</a></li>
+                            <li><a href="#">Italy</a></li>
+                            <li><a href="#">New Zealand</a></li>
+                            <li><a href="#">Portugal</a></li>
+                            <li><a href="#">South Africa</a></li>
+                            <li><a href="#">Spain</a></li>
+                            <li><a href="#">USA</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_about_us">
+                        <ul>
+                            <p><a href="#">About Us</a></p>
+                            <p><a href="#">Contact Us</a></p>
+                            <p><a href="#">Terms And Conditions</a></p>
+                            <p><a href="#">Privacy Policy</a></p>
+                            <p><a href="#">Refund / Cancellations</a></p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_last">
+                    <div class="copy_right">
+                        <p>© Wine Park, <span>2025. All Rights Reserved</span></p>
+                    </div>
+                    <div class="footer_last_icon">
+                        <p>Powered by</p>
+                        <img src="Utilities\AWS.png" alt="AWS img" id="aws">
+                        <img src="Utilities\ewizpwproductlogonew.svg" alt="ewizpwproduct logo" id="ewizpwproduct">
+                    </div>
+                </div>
+        </section>
+    </footer>
+    <!-- footer part end -->
+
 </body>
 </html>
