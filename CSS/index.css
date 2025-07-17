@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+/* header start */
+/* nav_up start*/
+
+.header_up{
+    height: 40px;
+    background-color: #ffcc25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(33, 37, 41);
+    font-weight: 500;
+}
+.header_up a{
+    color: #a34f5b;
+    text-decoration: none;
+    font-weight: 600;
+}
+.header_middle{
+    width: 100%;
+    height: 110px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.search_bar{
+    width: 165px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.search_input{
+    width: 130px;
+    font-size: 17px;
+    padding: 7px 10px;
+    opacity: 0.9;
+    border: none;
+    outline: none;
+}
+.contact_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contact_container a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+}
+.contact_container a:hover{
+    color: rgb(165, 65, 134);
+}
+.fa-shopping-cart{
+    font-size: 30px;
+    cursor: pointer;
+}
+.contact_container button{
+    padding: 8px 10px;
+    color: rgb(165, 65, 134);
+    background-color: #ffcc25;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* nav_up end */
+
+/* navbar_lower start */
+
+.navbar_lower{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-left: 220px;
+}
+.navbar_lower div a{
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+}
+.navbar_lower div a:hover{
+    color: rgb(165, 65, 134);
+}
+
+/* dropdown of all wine start */
+
+.all_wines{
+    position: relative;
+}
+.p_arrow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.fa-angle-down{
+    font-size: 10px;
+}
+.p_arrow:hover,.fa-angle-down:hover{
+    color: rgb(165, 65, 134);
+}
+
+.drop_all_wine_menu_container{
+    position: absolute;
+    top: 34px;
+    width: 720px;
+    max-height: 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.all_wines:hover .drop_all_wine_menu_container,.drop_all_wine_menu_container:hover{
+    max-height: 500px;
+    visibility: visible;
+    padding: 20px 20px 5px 20px;
+    opacity: 1;
+    z-index: 999;
+}
+
+.red_wine,.white_wine{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding-right: 35px;
+}
+.list_anchor_heading{
+    margin-bottom: 10px;
+}
+.list_anchor_heading a{
+    font-weight: 500;
+    font-size: 16px;
+}
+.all_list_anchor_container{
+    padding-left: 10px;
+    list-style-type: none;
+}
+.all_list_anchor_container li{
+    margin-bottom: 8px;
+}
+
+/* dropdown of all wine end */
+
+
+/* dropdown of gift wine start */
+
+.gift_wine{
+    position: relative;
+
+}
+.gift_wine_dropdown_container{
+    position: absolute;
+    top: 34px;
+    left: -60px;
+    width: 650px;
+    max-height: 0px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(-150px);
+    transition: all 0.4s ease;
+}
+.gift_wine:hover .gift_wine_dropdown_container,.gift_wine_dropdown_container:hover{
+    max-height: 275px;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 999;
+    opacity: 1;
+}
+
+.drop_gift_1_row,.drop_gift_2_row{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ul li{
+    list-style-type: none;
+    padding-right: 55px;
+}
+.drop_gift_1_row ul li, .drop_gift_2_row ul li{
+    margin-bottom: 5px;
+}
+.drop_gift_1_row ul li, .drop_gift_2_row ul li{
+    padding-left: 15px;
+}
+.drop_gift_1_row p, .drop_gift_2_row p, .drop_gift_3_row p{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.drop_gift_1_row p:hover, .drop_gift_2_row p:hover, .drop_gift_3_row p:hover{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: rgb(165, 65, 134);
+}
+
+/* dropdown of gift wine end */
+
+/* dropdown of region start */
+
+.Regions{
+    position: relative;
+}
+.region_wine_dropdown_container{
+    position: absolute;
+    top: 34px;
+    left: -170px;
+    width: 640px;
+    max-height: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.Regions:hover .region_wine_dropdown_container,.region_wine_dropdown_container:hover{
+    max-height: 210px;
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+}
+.drop_region_1_row,.drop_region_2_row,.drop_region_3_row{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.drop_region_1_row,.drop_region_2_row{
+    display: flex;
+    flex-direction: column;
+}
+.drop_region_1_row a,.drop_region_2_row a{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.drop_region_3_row ul p,.drop_region_4_row ul p{
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.drop_region_3_row ul p:hover,.drop_region_4_row ul p:hover{
+    color: rgb(165, 65, 134);
+}
+.drop_region_3_row ul li,.drop_region_4_row ul li{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/* dropdown of region end */
+
+/* dropdown of discover wine start */
+
+.discover_wine{
+    position: relative;
+}
+.drop_discover_1_row{
+    position: absolute;
+    top: 34px;
+    width: 280px;
+    max-height: 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.discover_wine:hover .drop_discover_1_row,.drop_discover_1_row:hover{
+    max-height: 360px;
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+}
+.drop_discover_1_row ul p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.drop_discover_1_row ul p:hover{
+    color: rgb(165, 65, 134);
+}
+.drop_discover_1_row ul li{
+    padding-left: 10px;
+    margin-bottom: 8px;
+    font-family: 16px;
+}
+
+/* dropdown of discover wine end */
+
+/* dropdown of brochure start */
+
+.brochure{
+    position: relative;
+}
+.drop_brochure_1_row{
+    position: absolute;
+    top: 34px;
+    width: 230px;
+    max-height: 0;
+    padding: 20px 0 20px 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.brochure:hover .drop_brochure_1_row,.drop_brochure_1_row:hover{
+    max-height: 200px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+}
+.drop_brochure_1_row ul li{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* dropdown of brochure end */
+
+/* navbar_lower end */
+
+/* header end */
+
+/* main start */
+
+.carousel {
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel img{
+    width: 100%;
+}
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* wine time start */
+
+.wine_timing_container{
+    width: 100%;
+    height: 410px;
+    padding: 50px 215px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: rgb(33, 37, 41);
+}
+.wine_timing_container h1{
+    font-size: 54px;
+    font-weight: 400;
+    color: rgb(165, 65, 134);
+}
+.wine_timing_container p{
+    width: 600px;
+}
+.wine_time h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: rgb(33, 37, 41);
+}
+.wine_time p{
+    line-height: 1.4;
+}
+.time_last_para{
+    width: 560px !important;
+    font-size: 14px;
+    color: rgb(33, 37, 41);
+    line-height: 1.4;
+}
+/* wine time end */
+
+/* wine map start */
+
+.wine_map_container{
+    width: 100%;
+    height: 480px;
+    display: flex;
+    gap: 30px;
+    padding: 0 210px;
+    background-color: #f8f8f8;
+}
+.left_map{
+    width: 600px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left_map_content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.left_map h3{
+    font-size: 28px;
+    font-weight: 500;
+    color: rgb(33, 37, 41);
+}
+.map_rating{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+.star-rating{
+    display: flex;
+}
+.star-rating p{
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 17px;
+}
+.star{
+    font-size: 17px;
+    color: #f86300;
+}
+.map_rating a{
+    color: rgb(33, 37, 41);
+    opacity: 0.7;
+}
+.left_map address{
+    opacity: 0.8;
+    color: rgb(33, 37, 41);
+}
+.right_map{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* wine map end */
+
+/* <============ wine type start ==========> */
+
+.wine_type_container{
+    width: 100%;
+    max-height: 350px;
+    padding: 20px 210px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.wine_type_container div{
+    border: 3px solid #ca2992;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.wine_type_container div:hover{
+    background-color: #fdcd24;
+    border: none;
+}
+.wine_type_container div a{
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
+/* <============ wine type end ==========> */
+
+/* <============ discover wine start ============> */
+
+.discover_wine_container{
+    width: 100%;
+    height: 400px;
+    padding: 30px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.discover_wine_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.discover_wine_heading span{
+    width: 220px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.discover_wine_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.discover_images{
+    border: 1px solid red;
+    max-height: 100%;
+}
+.discover_images_container{
+    max-width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.discoverImgContainer img{
+    width: 245px;
+    border: 1px solid black;
+}
+.discoverImgCaption{
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* <============ discover wine end ============> */
+
+/* <============ family wine start ============> */
+
+.family_wine_container{
+    width: 100%;
+    max-height: 530px;
+    padding: 30px 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.family_wine_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.family_wine_heading span{
+    width: 200px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.family_wine_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.arro_family_wine_img{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-angle-left,.fa-angle-right{
+    font-size: 32px;
+    font-weight: 400;
+    color: #94447b;
+}
+.fa-angle-right{
+    margin-left: 15px;
+}
+.family_wine_img_container{
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+.family_wine_img_container img{
+    width: 245px;
+    text-align: center;
+}
+.familyWineContainer{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #dbdbdb;
+}
+.captionContainer{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+.captionContainer button{
+    padding: 8px 20px;
+    background-color: #a14387;
+    color: white;
+    font-weight: 450;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.price{
+    font-size: 21px;
+}
+
+/* <============ family wine end ============> */
+
+/* <============ footer part start ============> */
+
+.footer_up{
+    width: 100%;
+    max-height: 100%;
+    padding: 50px 215px;
+    background-color: #dbdbdb;
+    display: flex;
+    gap: 80px;
+}
+.footer_up ul p a{
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+    font-size: 18px;
+}
+.footer_up ul p a:hover{
+    color: rgb(165, 65, 134);
+}
+.footer_up ul li a{
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+    font-size: 14px;
+}
+.footer_up ul li{
+    margin-top: 7px;
+}
+.footer_up ul li a:hover{
+    color: rgb(165, 65, 134);
+}
+.footer_red_wine ul p,.footer_white_wine ul p,.footer_region_wine ul p{
+    margin-bottom: 15px;
+}
+.footer_about_us ul p{
+    margin-bottom: 20px;
+}
+.footer_last{
+    height: 60px;
+    padding: 0 215px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copy_right>p{
+    font-weight: 550;
+    font-size: 15px;
+}
+.copy_right span{
+    font-weight: normal;
+}
+.footer_last_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#aws{
+    width: 40px;
+} 
+#ewizpwproduct{
+    width: 130px;
+}
+
+/* <============ footer part end ============> */
