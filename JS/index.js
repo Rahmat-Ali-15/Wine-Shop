@@ -12,22 +12,40 @@ function slideNext() {
 }
 
 // change every 3 seconds
-setInterval(slideNext, 5000);
+setInterval(slideNext, 3000);
+
+
+// scroll button
+
+const scrollBtn = document.querySelector(".fa-angle-up");
+
+window.addEventListener("scroll", () =>{
+  if (window.scrollY > 100){
+    scrollBtn.classList.add("showScrollBtn");
+  }
+  else{
+    scrollBtn.classList.remove("showScrollBtn")
+  }
+});
+
+function scrollUp(){
+  window.scrollTo({top:0,behavior:"smooth"})
+}
 
 let homeApi = `https://api-server-zecj.onrender.com/Home`;
 
-const discoverImagesData = async() =>{
+const wineImagesData = async() =>{
   try {
     const resImg = await fetch(homeApi);
     const resImgData = await resImg.json();
-    appendDiscoverWine(resImgData["discover-wine"],resImgData["family-wine"]);
+    appendWineData(resImgData["discover-wine"],resImgData["family-wine"]);
   } 
   catch (error) {
     console.log(error);  
   }
 }
 
-const appendDiscoverWine = (discoverValue,familyValue) => {
+const appendWineData = (discoverValue,familyValue) => {
   
   // discover wine
   const discoverImageContainer = document.querySelector(".discover_images_container");
