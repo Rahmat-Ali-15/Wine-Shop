@@ -38,14 +38,14 @@ const wineImagesData = async() =>{
   try {
     const resImg = await fetch(homeApi);
     const resImgData = await resImg.json();
-    appendWineData(resImgData["discover-wine"],resImgData["family-wine"],resImgData["spotlight-wine"],resImgData["gift-wine"],resImgData["best-seller"]);
+    appendWineData(resImgData["discover-wine"],resImgData["family-wine"],resImgData["spotlight-wine"],resImgData["gift-wine"],resImgData["best-seller"],resImgData["new-arrival"]);
   } 
   catch (error) {
     console.log(error);  
   }
 }
 
-const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestSellerValue) => {
+const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestSellerValue,newArrivalValue) => {
   
   // <============ discover wine start =============>
 
@@ -145,7 +145,7 @@ const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestS
     // <============ best seller wine start =============>
 
     const bestSellerImgContainer = document.querySelector(".bestSeller_wine_img_container");
-  for(i = 0; i<10;i++){
+    for(i = 0; i<10;i++){
 
     bestSellerValue.forEach((el)=>{
       let bestSellerImgDiv = document.createElement("div");
@@ -175,5 +175,44 @@ const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestS
     
   }
   // <============ best seller wine end =============>
+
+  // <============ new arrival wine start =============>
+
+    const newArrivalImgContainer = document.querySelector(".newArrival_wine_img_container");
+    for(i = 0; i<10;i++){
+
+    newArrivalValue.forEach((el)=>{
+      let newArrivalImgDiv = document.createElement("div");
+      newArrivalImgDiv.classList.add("newArrivalImgDiv");
+  
+      let newArrivalImg = document.createElement("img");
+      newArrivalImg.src = `${el.img}`;
+  
+      let captionContainer = document.createElement("div");
+      captionContainer.classList.add("captionContainer");
+  
+      let newArrivalImgCaption = document.createElement("p");
+      newArrivalImgCaption.innerText = el.img_caption;
+  
+      let price = document.createElement("p");
+      price.innerHTML = el.price;
+      price.classList.add("price")
+  
+      let cartBtn = document.createElement("button");
+      cartBtn.innerText = "ADD TO CART"
+  
+      captionContainer.append(newArrivalImgCaption,price,cartBtn)
+      newArrivalImgDiv.append(newArrivalImg,captionContainer);
+      newArrivalImgContainer.append(newArrivalImgDiv)
+  
+    });
+    
+  }
+  // <============ new arrival wine end =============>
+
+  // <============ beer & mead start =============>
+
+
+  // <============ beer & mead end =============>
 
 }
