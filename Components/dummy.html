@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy</title>
+    <style>
+        .newArrival_wine_container {
+            width: 100%;
+            max-height: 530px;
+            padding: 30px 190px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .newArrival_wine_heading {
+            height: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .newArrival_wine_heading span {
+            width: 200px;
+            height: 2px;
+            border: 0.10rem solid #dbdbdb;
+        }
+
+        .newArrival_wine_heading h3 {
+            font-size: 24px;
+            font-weight: 400;
+            color: rgb(33, 37, 41);
+        }
+
+        .arro_newArrival_wine_img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .newArrival_wine_img_container {
+            width: 100%;
+            max-height: 400px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .newArrival_wine_img_container img {
+            width: 245px;
+            text-align: center;
+        }
+
+        .newArrivalImgDiv {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid #dbdbdb;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script type="module">
+    import { dummy } from "../Components/dummy.js"
+
+    let homeApi = `https://api-server-zecj.onrender.com/Home`;
+
+    const wineImagesData = async () => {
+        try {
+            const resImg = await fetch(homeApi);
+            const resImgData = await resImg.json();
+            appendWineData(resImgData["new-arrival"]);
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+    const appendWineData = (newArrivalValue) => {
+
+
+        for (let i = 0; i < 1; i++) {
+
+            newArrivalValue.forEach((el) => {
+                console.log(el);
+                document.body.innerHTML += dummy(el.img, el.img_caption, el.price)
+            });
+
+        }
+
+
+
+    }
+    window.onload = wineImagesData()
+
+</script>
+
+</html>
