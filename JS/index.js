@@ -38,16 +38,17 @@ const wineImagesData = async() =>{
   try {
     const resImg = await fetch(homeApi);
     const resImgData = await resImg.json();
-    appendWineData(resImgData["discover-wine"],resImgData["family-wine"]);
+    appendWineData(resImgData["discover-wine"],resImgData["family-wine"],resImgData["spotlight-wine"],resImgData["gift-wine"],resImgData["best-seller"]);
   } 
   catch (error) {
     console.log(error);  
   }
 }
 
-const appendWineData = (discoverValue,familyValue) => {
+const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestSellerValue) => {
   
-  // discover wine
+  // <============ discover wine start =============>
+
   const discoverImageContainer = document.querySelector(".discover_images_container");
   discoverValue.forEach((el) =>{
     let imgDiv = document.createElement("div");
@@ -63,9 +64,10 @@ const appendWineData = (discoverValue,familyValue) => {
     imgDiv.append(img,discoverImgCaption);
     discoverImageContainer.append(imgDiv);
   });
+  // <============ discover wine end =============>
 
 
-  // Family wine
+  // <============ family wine start =============>
 
   const familyImages = document.querySelector(".family_wine_img_container");
   for(i = 0; i<10;i++){
@@ -81,7 +83,7 @@ const appendWineData = (discoverValue,familyValue) => {
       captionContainer.classList.add("captionContainer");
   
       let familyImgCaption = document.createElement("p");
-      familyImgCaption.innerText = el.para;
+      familyImgCaption.innerText = el.img_caption;
   
       let price = document.createElement("p");
       price.innerHTML = el.price;
@@ -94,7 +96,84 @@ const appendWineData = (discoverValue,familyValue) => {
       familyDiv.append(familyWineImg,captionContainer);
       familyImages.append(familyDiv)
   
-    })
+    });
+    
   }
+  // <============ family wine end =============>
+
+
+  // <============ spotlight start =============>
+
+    const spotlightImgContainer = document.querySelector(".spotlight_img_container");
+
+    spotlightValue.forEach((el) => {
+      let spotlightImgDiv = document.createElement("div");
+      spotlightImgDiv.classList.add("spotlightImgDiv");
+
+      let spotImg = document.createElement("img");
+      spotImg.src = el.img;
+
+      let spotImgCap = document.createElement("p");
+      spotImgCap.innerText = el.img_caption;
+
+      spotlightImgDiv.append(spotImg,spotImgCap);
+      spotlightImgContainer.append(spotlightImgDiv);
+
+    });
+    // <============ spotlight wine end =============>
+
+    // <============ gift wine start =============>
+
+    const giftImgContainer = document.querySelector(".gift_img_container");
+
+    giftValue.forEach((el) => {
+      let giftImgDiv = document.createElement("div");
+      giftImgDiv.classList.add("giftImgDiv");
+
+      let giftImg = document.createElement("img");
+      giftImg.src = el.img;
+
+      let giftImgCap = document.createElement("p");
+      giftImgCap.innerText = el.img_caption;
+
+      giftImgDiv.append(giftImg,giftImgCap);
+      giftImgContainer.append(giftImgDiv);
+
+    });
+    // <============ gift wine end =============>
+
+    // <============ best seller wine start =============>
+
+    const bestSellerImgContainer = document.querySelector(".bestSeller_wine_img_container");
+  for(i = 0; i<10;i++){
+
+    bestSellerValue.forEach((el)=>{
+      let bestSellerImgDiv = document.createElement("div");
+      bestSellerImgDiv.classList.add("bestSellerImgDiv");
+  
+      let bestSellerImg = document.createElement("img");
+      bestSellerImg.src = `${el.img}`;
+  
+      let captionContainer = document.createElement("div");
+      captionContainer.classList.add("captionContainer");
+  
+      let bestSellerImgCaption = document.createElement("p");
+      bestSellerImgCaption.innerText = el.img_caption;
+  
+      let price = document.createElement("p");
+      price.innerHTML = el.price;
+      price.classList.add("price")
+  
+      let cartBtn = document.createElement("button");
+      cartBtn.innerText = "ADD TO CART"
+  
+      captionContainer.append(bestSellerImgCaption,price,cartBtn)
+      bestSellerImgDiv.append(bestSellerImg,captionContainer);
+      bestSellerImgContainer.append(bestSellerImgDiv)
+  
+    });
+    
+  }
+  // <============ best seller wine end =============>
 
 }
