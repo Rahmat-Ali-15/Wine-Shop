@@ -35,18 +35,18 @@ body{
 /* scroll bar start */
 
 ::-webkit-scrollbar{
-    width: 2em;
+    width: 0.8em;
     height: 2em;
 }
 ::-webkit-scrollbar-track{
     border-radius: 100vh;
-    background-color: #ffcc25;
+    /* background-color: #ffcc25; */
     /* margin-block: 0.5em; */
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #a24388;
-    border: 0.5em solid #ffcc25;
-    border-radius: 10vh;
+    background-color: #aca5aa;
+    /* border: 0.5em solid #ffcc25; */
+    border-radius: 100vh;
 }
 /* scroll bar end */
 
@@ -582,10 +582,6 @@ ul li{
     font-weight: 400;
     color: rgb(33, 37, 41);
 }
-.discover_images{
-    border: 1px solid red;
-    max-height: 100%;
-}
 .discover_images_container{
     max-width: 100%;
     display: flex;
@@ -631,7 +627,6 @@ ul li{
     color: rgb(33, 37, 41);
 }
 .arro_family_wine_img{
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -686,6 +681,156 @@ ul li{
 }
 
 /* <============ family wine end ============> */
+
+/* <============ spotlight wine start ==============> */
+
+.spotlight_wine_container{
+    width: 100%;
+    max-height: 400px;
+    padding: 30px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.spotlight_wine_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.spotlight_wine_heading span{
+    width: 220px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.spotlight_wine_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.spotlight_img_container{
+    max-width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.spotlightImgDiv{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.spotlightImgDiv img{
+    width: 245px;
+    border: 1px solid black;
+    padding: 1px;
+}
+
+/* <============ spotlight wine end ==============> */
+
+/* <============ gift wine start ==============> */
+
+.gift_wine_container{
+    width: 100%;
+    max-height: 400px;
+    padding: 30px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.gift_wine_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.gift_wine_heading span{
+    width: 220px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.gift_wine_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.gift_img_container{
+    max-width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.giftImgDiv{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.giftImgDiv img{
+    width: 245px;
+    border: 1px solid black;
+    padding: 1px;
+}
+
+/* <============ gift wine end ==============> */
+
+/* <============ best seller wine start ==============> */
+
+.bestSeller_wine_container{
+    width: 100%;
+    max-height: 530px;
+    padding: 30px 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.bestSeller_wine_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.bestSeller_wine_heading span{
+    width: 200px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.bestSeller_wine_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.arro_bestSeller_wine_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bestSeller_wine_img_container{
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+.bestSeller_wine_img_container img{
+    width: 245px;
+    text-align: center;
+}
+.bestSellerImgDiv{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #dbdbdb;
+}
+
+/* <============ best seller wine end ==============> */
 
 /* <============ footer part start ============> */
 
