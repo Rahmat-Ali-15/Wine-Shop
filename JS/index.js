@@ -329,21 +329,20 @@ const appendWineData = (discoverValue, familyValue, spotlightValue, giftValue, b
   }
   // <============ accessories end ==============> 
 
-    // <============ mixed collection start ==============>
+    // <============ blog start ==============>
 
   const blogImagesContainer = document.querySelector(".blog_Img_container");
   for (i = 0; i < 10; i++) {
 
     blogValue.forEach((el) => {
-      let blogDiv = document.createElement("div");
-      blogDiv.classList.add("blogImgDiv");
-
+      let blogImgDiv = document.createElement("div");
+      blogImgDiv.classList.add("blogImgDiv");
+      
+      let imgParaDiv = document.createElement("div");
+      imgParaDiv.classList.add("imgParaDiv");
+      
       let blogImg = document.createElement("img");
       blogImg.src = `${el.img}`;
-
-      // let captionContainer = document.createElement("div");
-      // captionContainer.classList.add("captionContainer");
-      let div = document.createElement("div");
 
       let blogImgCaption = document.createElement("p");
       blogImgCaption.innerText = el.img_caption;
@@ -351,15 +350,15 @@ const appendWineData = (discoverValue, familyValue, spotlightValue, giftValue, b
 
       let blogImgPara = document.createElement("p");
       blogImgPara.innerText = el.para;
+      blogImgPara.classList.add("paraImg")
 
-      // captionContainer.append(blogImgCaption,blogImgPara)
-      div.append(blogImg,blogImgCaption)
-      blogDiv.append(div, blogImgPara);
-      blogImagesContainer.append(blogDiv)
+      imgParaDiv.append(blogImg,blogImgCaption)
+      blogImgDiv.append(imgParaDiv, blogImgPara);
+      blogImagesContainer.append(blogImgDiv)
 
     });
 
   }
-  // <============ mixed collection end ==============>
+  // <============ blog end ==============>
 
 }
