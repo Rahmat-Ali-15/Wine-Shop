@@ -38,14 +38,14 @@ const wineImagesData = async() =>{
   try {
     const resImg = await fetch(homeApi);
     const resImgData = await resImg.json();
-    appendWineData(resImgData["discover-wine"],resImgData["family-wine"],resImgData["spotlight-wine"],resImgData["gift-wine"],resImgData["best-seller"],resImgData["new-arrival"]);
+    appendWineData(resImgData["discover-wine"],resImgData["family-wine"],resImgData["spotlight-wine"],resImgData["gift-wine"],resImgData["best-seller"],resImgData["new-arrival"],resImgData["beer-mead"]);
   } 
   catch (error) {
     console.log(error);  
   }
 }
 
-const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestSellerValue,newArrivalValue) => {
+const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestSellerValue,newArrivalValue,beerValue) => {
   
   // <============ discover wine start =============>
 
@@ -212,7 +212,36 @@ const appendWineData = (discoverValue,familyValue,spotlightValue,giftValue,bestS
 
   // <============ beer & mead start =============>
 
+const beerImgContainer = document.querySelector(".beer_img_container");
+    for(i = 0; i<10;i++){
 
+    beerValue.forEach((el)=>{
+      let beerImgDiv = document.createElement("div");
+      beerImgDiv.classList.add("beerImgDiv");
+  
+      let beerImg = document.createElement("img");
+      beerImg.src = `${el.img}`;
+  
+      let captionContainer = document.createElement("div");
+      captionContainer.classList.add("captionContainer");
+  
+      let beerImgCaption = document.createElement("p");
+      beerImgCaption.innerText = el.img_caption;
+  
+      let price = document.createElement("p");
+      price.innerHTML = el.price;
+      price.classList.add("price")
+  
+      // let cartBtn = document.createElement("button");
+      // cartBtn.innerText = "View All"
+  
+      captionContainer.append(beerImgCaption,price)
+      beerImgDiv.append(beerImg,captionContainer);
+      beerImgContainer.append(beerImgDiv)
+  
+    });
+    
+  }
   // <============ beer & mead end =============>
 
 }
