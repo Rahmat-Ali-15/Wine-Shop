@@ -837,7 +837,7 @@ ul li{
 
 /* <============ best seller wine end ==============> */
 
-/* <============ new arrival wine end ==============> */
+/* <============ new arrival wine start ==============> */
 
 .newArrival_wine_container{
     width: 100%;
@@ -890,11 +890,11 @@ ul li{
 }
 /* <============ new arrival wine end ==============> */
 
-/* <============ new arrival wine end ==============> */
+/* <============ beer start ==============> */
 
 .beer_container{
     width: 100%;
-    height: 540px;
+    height: 520px;
     padding: 30px 190px;
     display: flex;
     flex-direction: column;
@@ -957,7 +957,242 @@ ul li{
     border-radius: 20px;
     cursor: pointer;
 }
-/* <============ new arrival wine end ==============> */
+/* <============ beer end ==============> */
+
+/* <============ brand wine start ==============> */
+
+.brand_wine_container{
+    width: 100%;
+    max-height: 400px;
+    padding: 30px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.brand_wine_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.brand_wine_heading span{
+    width: 220px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.brand_wine_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.brand_img_container{
+    max-width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.brandImgDiv{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.brandImgDiv img{
+    width: 245px;
+    height: 250px;
+    border: 1px solid black;
+    padding: 1px;
+}
+
+/* <============ brand wine end ==============> */
+
+/* <============ mixed collection start ==============> */
+
+.mixed_collection_container{
+    width: 100%;
+    height: 520px;
+    padding: 30px 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.mixed_collection_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.mixed_collection_heading span{
+    width: 200px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.mixed_collection_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.arro_mixed_collection_img{
+    display: flex;
+    align-items: center;
+}
+.mixed_collection_img_container{
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+.mixed_collection_img_container img{
+    width: 245px;
+    text-align: center;
+}
+.mixedImgDiv{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #dbdbdb;
+}
+/* <============ mixed collection end ==============> */
+
+/* <============ accessories start ==============> */
+
+.accessories_container{
+    width: 100%;
+    max-height: 530px;
+    padding: 30px 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.accessories_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.accessories_heading span{
+    width: 200px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.accessories_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.arro_accessories_img{
+    display: flex;
+    align-items: center;
+}
+.accessories_Img_container{
+    width: 100%;
+    max-height: 425px;
+    display: flex;
+    overflow: hidden;
+}
+.accessories_Img_container img{
+    width: 245px;
+    height: 250px;
+    text-align: center;
+}
+.accessoriesDiv{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #dbdbdb;
+}
+.accessoriesCaptionContainer{
+    padding: 20px 10px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+.accessoriesCaptionContainer button{
+    padding: 8px 20px;
+    background-color: #a14387;
+    color: white;
+    font-weight: 450;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* <============ accessories end ==============> */
+
+/* <============ blog start ==============> */
+
+.blog_container{
+    width: 100%;
+    max-height: 480px;
+    padding: 30px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid red;
+}
+.blog_heading{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.blog_heading span{
+    width: 220px;
+    height: 2px;
+    border: 0.10rem solid #dbdbdb;
+}
+.blog_heading h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+}
+.arro_blog_img{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+.blog_Img_container{
+    max-width: 100%;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.blogImgDiv{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blogImgDiv img{
+    width: 245px;
+    border: 1px solid black;
+    padding: 1px;
+}
+.blogCaption{
+    border: 1px solid red;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/* <============ blog end ==============> */
 
 /* <============ footer part start ============> */
 
