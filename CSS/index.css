@@ -28,6 +28,10 @@ body{
 .showScrollBtn{
     opacity: 1;
     pointer-events: auto;
+    transition: background-color 0.4s ease;
+}
+.showScrollBtn:hover{
+    background-color: #ffcc25;
 }
 
 /* scroll button end */
@@ -35,17 +39,14 @@ body{
 /* scroll bar start */
 
 ::-webkit-scrollbar{
-    width: 0.8em;
-    height: 2em;
+    width: 0.4em;
+    height: 0.4em;
 }
 ::-webkit-scrollbar-track{
     border-radius: 100vh;
-    /* background-color: #ffcc25; */
-    /* margin-block: 0.5em; */
 }
 ::-webkit-scrollbar-thumb{
     background-color: #aca5aa;
-    /* border: 0.5em solid #ffcc25; */
     border-radius: 100vh;
 }
 /* scroll bar end */
@@ -54,6 +55,7 @@ body{
 /* nav_up start*/
 
 .header_up{
+    width: 99.8%;
     height: 40px;
     background-color: #ffcc25;
     display: flex;
@@ -541,6 +543,7 @@ ul li{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 .wine_type_container div:hover{
     background-color: #fdcd24;
@@ -868,7 +871,6 @@ ul li{
 }
 .arro_newArrival_wine_img{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 .newArrival_wine_img_container{
