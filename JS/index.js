@@ -12,38 +12,6 @@ function slideNext() {
 }
 
 
-// const track = document.getElementById('carouselTrack');
-// let index = 0;
-
-// // Count images initially
-// let images = track.children;
-// const totalImages = images.length;
-
-// // Clone the first image and append at the end
-// const firstClone = images[0].cloneNode(true);
-// track.appendChild(firstClone);
-
-// // Now total images includes the clone
-// const newTotal = track.children.length;
-
-// function slideNext() {
-//   index++;
-//   track.style.transition = 'transform 0.5s ease-in-out';
-//   track.style.transform = `translateX(-${index * 100}%)`;
-  
-//   // When transition ends, if we are on the clone, jump back without animation
-//   track.addEventListener('transitionend', handleTransitionEnd);
-// }
-
-// function handleTransitionEnd() {
-//   if (index === totalImages) {
-//     track.style.transition = 'none'; // remove animation
-//     index = 0;
-//     track.style.transform = `translateX(0)`; // jump back to real first
-//   }
-//   // remove event listener so it doesn't pile up
-//   track.removeEventListener('transitionend', handleTransitionEnd);
-// }
 
 // change every 3 seconds
 setInterval(slideNext, 3000);
